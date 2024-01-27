@@ -1,0 +1,59 @@
+@import url('https://fonts.cdnfonts.com/css/museo');
+nav {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Logo */
+.nav-logo a img {
+    width: 240px;
+}
+
+/* Buttons */
+.nav-buttons {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 10px; /* Round around corners */
+    display: flex;
+    height: 45px;
+    align-items: center;
+    border: 2px solid #f2f2f2;
+    padding: 0 6px;
+}
+
+.nav-buttons a {
+    font-size: large;
+    font-family: 'Museo', sans-serif;
+    font-weight: bold;
+    padding: 6px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #5a616e;
+}
+
+.nav-buttons a.active {
+    background-color: #f2f2f2;
+    color: #5a616e;
+}
+
+.nav-buttons a:hover {
+    background-color: #08a45c;
+    box-shadow: 0px 0px 4px #08a45c;
+    color: white;
+}
+
+/* Right corner (accounts and search-bar) */
+.right-corner {
+    display: flex;
+    float: right;
+    align-items: center;
+}
+
+.search-bar {
+    margin-right: 20px;
+}

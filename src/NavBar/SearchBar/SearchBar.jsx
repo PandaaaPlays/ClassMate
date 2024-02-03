@@ -2,7 +2,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
 import React, {useState} from "react";
 import {addSearchBarEventListener} from "./SearchBarEventListener";
-import './SearchBar.css'
+import "./SearchBar.css"
 
 const SearchBar = () => {
     const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);

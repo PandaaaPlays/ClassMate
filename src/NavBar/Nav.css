@@ -5,6 +5,7 @@ nav {
     justify-content: space-between;
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 20px;
 }
 
 /* Logo */
@@ -27,13 +28,14 @@ nav {
 }
 
 .nav-buttons a {
-    font-size: large;
+    font-size: 18px;
     font-family: 'Museo', sans-serif;
     font-weight: bold;
     padding: 6px 25px;
     border-radius: 10px;
     text-decoration: none;
     color: #5a616e;
+    transition: 0.2s;
 }
 
 .nav-buttons a.active {
@@ -42,9 +44,10 @@ nav {
 }
 
 .nav-buttons a:hover {
-    background-color: #08a45c;
-    box-shadow: 0px 0px 4px #08a45c;
+    background-color: #32D9E2;
+    box-shadow: 0px 0px 4px #32D9E2;
     color: white;
+    font-size: 22px;
 }
 
 /* Right corner (accounts and search-bar) */

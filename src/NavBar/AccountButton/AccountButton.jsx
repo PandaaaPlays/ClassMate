@@ -1,6 +1,7 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import React  from "react";
-import './AccountButton.css'
+import "./AccountButton.css"
+import "../../Utils/Utils.css"
 import {faUser} from "@fortawesome/free-regular-svg-icons";
 
 const AccountButton = () => {
@@ -9,7 +10,7 @@ const AccountButton = () => {
             <a href="#" className="account-button">
                 <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
             </a>
-            <span className="account-tooltip">Your account</span>
+            <span className="tooltip account-tooltip">Your account</span>
         </div>
     );
 }

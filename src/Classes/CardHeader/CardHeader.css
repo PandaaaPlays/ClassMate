@@ -1,0 +1,32 @@
+.card-header {
+    overflow: hidden;
+    border-bottom: 2px solid #f2f2f2;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+    & img {
+        width: 100%;
+        display: block;
+        transition: transform 0.4s ease;
+    }
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.card-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 45px;
+    font-family: 'Museo', sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 0 -4px 10px rgba(255,255,255,0.3);
+    transition: 0.4s;
+}

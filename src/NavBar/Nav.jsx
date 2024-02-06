@@ -1,6 +1,6 @@
 import React from "react";
 import "./Nav.css"
-import logo from "../Images/logo_init.png"
+import logo from "../Images/logo_init2.png"
 import SearchBar from './SearchBar/SearchBar'
 import AccountButton from "./AccountButton/AccountButton";
 

@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Nav from './NavBar/Nav';
 import ClassCard from "./Classes/ClassCard";
+import Schedule from "./Schedule/Schedule";
 import "./App.css";
 import {calculateTime} from "./Classes/TimeCalculation";
 
@@ -12,7 +13,7 @@ const App = () => {
         switch (selectedPage) {
             case "cours":
                 return (
-                    <div className="classCards">
+                    <div className="class-container">
                         <ClassCard
                             number="IFT123"
                             name="Développement de site web"
@@ -41,43 +42,7 @@ const App = () => {
                 );
             case "horaire":
                 return (
-                    <div className="schedule">
-                        <div className="weekdays">
-                            <div className="day">Lundi</div>
-                            <div className="day">Mardi</div>
-                            <div className="day">Mercredi</div>
-                            <div className="day">Jeudi</div>
-                            <div className="day">Vendredi</div>
-                            <div className="day">Samedi</div>
-                            <div className="day">Dimanche</div>
-                        </div>
-                        <div className="hours">
-                            <div className="hour">00:00</div>
-                            <div className="hour">01:00</div>
-                            <div className="hour">02:00</div>
-                            <div className="hour">03:00</div>
-                            <div className="hour">04:00</div>
-                            <div className="hour">05:00</div>
-                            <div className="hour">06:00</div>
-                            <div className="hour">07:00</div>
-                            <div className="hour">08:00</div>
-                            <div className="hour">09:00</div>
-                            <div className="hour">10:00</div>
-                            <div className="hour">11:00</div>
-                            <div className="hour">12:00</div>
-                            <div className="hour">13:00</div>
-                            <div className="hour">14:00</div>
-                            <div className="hour">15:00</div>
-                            <div className="hour">16:00</div>
-                            <div className="hour">17:00</div>
-                            <div className="hour">18:00</div>
-                            <div className="hour">19:00</div>
-                            <div className="hour">20:00</div>
-                            <div className="hour">21:00</div>
-                            <div className="hour">22:00</div>
-                            <div className="hour">23:00</div>
-                        </div>
-                    </div>
+                    <Schedule />
                 );
             case "devoirs":
                 return (<a></a>);

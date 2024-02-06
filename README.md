@@ -1,4 +1,4 @@
-## ÉtUdeS Website
+## ClassMate Website
 Made by Étienne Toupin using React.
 
 ## Available Scripts

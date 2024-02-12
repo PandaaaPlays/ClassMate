@@ -1,11 +1,15 @@
 import React from "react";
 import "./Schedule.css";
+import {
+    getDateFromWeekMonday,
+    getFormattedDayNumber,
+    getFormattedMonth,
+    getFormattedWeekday,
+    getWeekMondayDate
+} from "./ScheduleDates";
 
 const Schedule = () => {
-    const date = new Date();
-    const today = date.toLocaleString('fr-FR', {weekday: 'long'});
-    const todayNumber = date.toLocaleString('fr-FR', {day: 'numeric'});
-    const todayMonth = date.toLocaleString('fr-FR', {month: 'short'});
+    const today = new Date(2024, 1, 11);
 
     const days = {
         "Lundi": ["Tâche lundi 1", "Tâche lundi 2"],
@@ -17,19 +21,23 @@ const Schedule = () => {
         "Dimanche": ["Tâche dimanche 1", "Tâche dimanche 2"]
     };
 
+    const mondayDate = getWeekMondayDate(today);
+
     return (
         <div className="schedule">
             <div className="schedule-header">
-                Rebonjour John,
+                Horaire | Semaine du {getFormattedDayNumber(mondayDate)} {getFormattedMonth(mondayDate, true)}
             </div>
             <div>
                 <table className="schedule-body">
                     <thead>
                     <tr>
-                        {Object.keys(days).map(day => (
-                            <th className={`schedule-day ${day.toLowerCase() === today ? "today" : ""}`}>
-                                { day.toLowerCase() === today && <span>Aujourd'hui ›</span> }
-                                <span>{day} | {todayNumber} {todayMonth}</span>
+                        {Object.keys(days).map((day, index) => (
+                            <th className={`schedule-day ${day.toLowerCase() === getFormattedWeekday(today) ? "today" : ""}`}>
+                                { day.toLowerCase() === getFormattedWeekday(today) && <span>Aujourd'hui ›</span> }
+                                <div className="date">
+                                    <span>{day} | {getFormattedDayNumber(getDateFromWeekMonday(mondayDate, index))} {getFormattedMonth(getDateFromWeekMonday(mondayDate, index))}</span>
+                                </div>
                             </th>
                         ))}
                     </tr>

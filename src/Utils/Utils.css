@@ -51,6 +51,10 @@
     font-family: 'Museo', sans-serif;
     transition: opacity 0.3s;
     pointer-events: none;
+    font-style: normal;
+    font-weight: normal;
+    text-shadow: none;
+    z-index: 2;
 }
 
 .placeholder {

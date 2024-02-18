@@ -1,0 +1,17 @@
+.hour-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 127px;
+    pointer-events: none; /* This allows clicks to pass through to elements underneath */
+}
+
+.hour-line {
+    position: absolute;
+    height: 2px;
+    background-color: #FAFAFA;
+    left: 45px; /* Offset the line from the left */
+    right: 0; /* Offset the line from the right */
+}

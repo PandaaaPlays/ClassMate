@@ -23,3 +23,6 @@ export function getDateFromWeekMonday(weekMonday, day) {
     const date = new Date(weekMonday);
     return new Date(date.setDate(date.getDate() + day));
 }
+
+export const today = new Date();
+export const monday = getWeekMondayDate(today);

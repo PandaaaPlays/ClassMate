@@ -1,0 +1,98 @@
+.task {
+    position: absolute;
+    margin: 2px 2px 0 2px;
+    padding: 6px 8px 0 8px;
+    border-radius: 10px;
+    width: calc(100% - 25px);
+    display: flex;
+    flex-direction: column;
+}
+
+.task.red {
+    border-left: 5px solid rgba(255, 70, 0, 0.8);
+    background: linear-gradient(to left, rgba(255, 70, 0, 0.8), rgba(255, 140, 0, 0.8));
+}
+.task.red:hover {
+    background: linear-gradient(to left, rgba(255, 70, 0, 1), rgba(255, 140, 0, 1));
+}
+
+.task.green {
+    border-left: 5px solid rgba(0, 180, 0, 0.8);
+    background: linear-gradient(to left, rgba(0, 180, 0, 0.8), rgba(0, 255, 0, 0.8));
+}
+.task.green:hover {
+    background: linear-gradient(to left, rgba(0, 180, 0, 1), rgba(0, 255, 0, 1));
+}
+
+.task.yellow {
+    border-left: 5px solid rgba(255, 200, 0, 0.8);
+    background: linear-gradient(to left, rgba(255, 200, 0, 0.8), rgba(255, 255, 0, 0.8));
+}
+.task.yellow:hover {
+    background: linear-gradient(to left, rgba(255, 200, 0, 1), rgba(255, 255, 0, 1));
+}
+
+.task.purple {
+    border-left: 5px solid rgba(128, 0, 128, 0.8);
+    background: linear-gradient(to left, rgba(128, 0, 128, 0.8), rgba(147, 112, 219, 0.8));
+}
+.task.purple:hover {
+    background: linear-gradient(to left, rgba(128, 0, 128, 1), rgba(147, 112, 219, 1));
+}
+
+.task.blue {
+    border-left: 5px solid rgba(4, 169, 196, 0.8);
+    background: linear-gradient(to left, rgba(4, 169, 196, 0.8), rgba(111, 229, 235, 0.8));
+}
+
+.task.blue:hover {
+    background: linear-gradient(to left, rgba(4, 169, 196, 1), rgba(111, 229, 235, 1));
+}
+
+.task.dark-blue {
+    border-left: 5px solid rgba(0, 0, 139, 0.8);
+    background: linear-gradient(to left, rgba(0, 0, 139, 0.8), rgba(0, 0, 205, 0.8));
+}
+.task.dark-blue:hover {
+    background: linear-gradient(to left, rgba(0, 0, 139, 1), rgba(0, 0, 205, 1));
+}
+
+.task-title {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 8px 0;
+}
+
+.task-time {
+    margin: 0;
+    font-size: 10px;
+    color: #FAFAFA;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    font-family: 'Lato', sans-serif;
+}
+
+.task-class {
+    margin: 0;
+    font-size: 10px;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+}
+
+.task-description {
+    position: relative;
+    margin: 0;
+    font-size: 14px;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.task-description:hover > .tooltip-ellipsis {
+    opacity: 1;
+}

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Nav from './NavBar/Nav';
 import ClassCard from "./Classes/ClassCard";
 import Schedule from "./Schedule/Schedule";
@@ -7,6 +7,10 @@ import {calculateTime} from "./Classes/TimeCalculation";
 
 const App = () => {
     const [selectedPage, setSelectedPage] = useState("cours");
+
+    useEffect(() => {
+        document.title = `ClassMate - ${selectedPage.charAt(0).toUpperCase() + selectedPage.slice(1)}`;
+    }, [selectedPage]);
 
     // Function to render the selected page
     const renderPage = () => {
@@ -38,11 +42,73 @@ const App = () => {
                                 day3: { button: "J", time: "9:00", local: "D7-2023" },
                                 day4: { button: "V", time: "9:00", local: "D7-2023" }}}
                             nextWorkTime={calculateTime(new Date(2024, 1, 17, 19, 5))}/>
+                        <ClassCard
+                            number="ENV123"
+                            name="Étude de l'environnement"
+                            teacher="Teacher Name"
+                            teacherOffice="D7-1234"
+                            schedule={ {
+                                day0: { button: "L" },
+                                day1: { button: "M" },
+                                day2: { button: "M" },
+                                day3: { button: "J", time: "9:00", local: "D7-2023" },
+                                day4: { button: "V", time: "9:00", local: "D7-2023" }}}
+                            nextWorkTime={calculateTime(new Date(2024, 1, 17, 19, 5))}/>
+                        <ClassCard
+                            number="ENV123"
+                            name="Étude de l'environnement"
+                            teacher="Teacher Name"
+                            teacherOffice="D7-1234"
+                            schedule={ {
+                                day0: { button: "L" },
+                                day1: { button: "M" },
+                                day2: { button: "M" },
+                                day3: { button: "J", time: "9:00", local: "D7-2023" },
+                                day4: { button: "V", time: "9:00", local: "D7-2023" }}}
+                            nextWorkTime={calculateTime(new Date(2024, 1, 17, 19, 5))}/>
+                        <ClassCard
+                            number="ENV123"
+                            name="Étude de l'environnement"
+                            teacher="Teacher Name"
+                            teacherOffice="D7-1234"
+                            schedule={ {
+                                day0: { button: "L" },
+                                day1: { button: "M" },
+                                day2: { button: "M" },
+                                day3: { button: "J", time: "9:00", local: "D7-2023" },
+                                day4: { button: "V", time: "9:00", local: "D7-2023" }}}
+                            nextWorkTime={calculateTime(new Date(2024, 1, 17, 19, 5))}/>
+                        <ClassCard
+                            number="ENV123"
+                            name="Étude de l'environnement"
+                            teacher="Teacher Name"
+                            teacherOffice="D7-1234"
+                            schedule={ {
+                                day0: { button: "L" },
+                                day1: { button: "M" },
+                                day2: { button: "M" },
+                                day3: { button: "J", time: "9:00", local: "D7-2023" },
+                                day4: { button: "V", time: "9:00", local: "D7-2023" }}}
+                            nextWorkTime={calculateTime(new Date(2024, 1, 17, 19, 5))}/>
+                        <ClassCard
+                            number="ENV123"
+                            name="Étude de l'environnement"
+                            teacher="Teacher Name"
+                            teacherOffice="D7-1234"
+                            schedule={ {
+                                day0: { button: "L" },
+                                day1: { button: "M" },
+                                day2: { button: "M" },
+                                day3: { button: "J", time: "9:00", local: "D7-2023" },
+                                day4: { button: "V", time: "9:00", local: "D7-2023" }}}
+                            nextWorkTime={calculateTime(new Date(2024, 1, 17, 19, 5))}/>
                     </div>
                 );
             case "horaire":
                 return (
-                    <Schedule />
+                    <div className="class-container">
+                        <Schedule />
+                    </div>
                 );
             case "devoirs":
                 return (<a></a>);
